@@ -1,0 +1,17 @@
+doctype html
+head
+  title YouTube Converter
+  script(type='text/javascript' src='/javascripts/module.js')
+  script(type='text/javascript' src='/javascripts/start_convert.js')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+h1
+  a(href='https://www.youtube.com/')
+    i.fa.fa-youtube-play(style='font-size:48px;color:red')
+  span.you You
+  span.tube Tube 
+  span.converter Converter
+form(action="/url", method="get")
+  label(for="URL") Enter URL:
+  input.URL-input(type="text", name="URL", id="URL", placeholder='https://www.youtube.com/watch?v=TMEmv9uienU', required)
+  button.converter-button Convert
