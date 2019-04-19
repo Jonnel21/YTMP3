@@ -5,8 +5,11 @@ const router = express.Router()
 
 router.get('/', (req, res, next) => {
     const url = req.query.URL
-
     res.send(`Converting ${url}!`)
-    ytdl(url).pipe(fs.createWriteStream('video.flv'))
+
+    ytdl.getInfo(url, (err, info) => {
+        const title = info.title
+        ytdl(url).pipe(fs.createWriteStream(title.replace(/\W/g, ' ')))
+    })
 })
 module.exports = router

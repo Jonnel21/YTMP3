@@ -23,8 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/url', urlRouter); 
-/*console.log('SERVER: ' + document.getElementsByClassName('URL-input').value)
-app.use('/?URL=' + document.getElementsByClassName[0].value, urlRouter)*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
