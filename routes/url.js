@@ -9,7 +9,7 @@ router.get('/', (req, res, next) => {
 
     ytdl.getInfo(url, (err, info) => {
         const title = info.title
-        ytdl(url).pipe(fs.createWriteStream(title.replace(/\W/g, ' ')))
+        ytdl(url).pipe(fs.createWriteStream(title.replace(/\W/g, ' ') + '.mp4'))
     })
 })
 module.exports = router
