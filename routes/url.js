@@ -15,7 +15,7 @@ createMusicFolder()
 
 router.get('/', (req, res, next) => {
     const url = req.query.URL
-    
+
     ytdl.getInfo(url, (err, info) => {
         const title = info.title
         const audioFormats = ytdl.filterFormats(info.formats, 'audioonly')
