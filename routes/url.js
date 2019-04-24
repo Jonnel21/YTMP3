@@ -11,10 +11,10 @@ const createMusicFolder = () => {
         else { console.log(stats) }
     })
 }
-createMusicFolder()
 
 router.get('/', (req, res, next) => {
     const url = req.query.URL
+    createMusicFolder()
 
     ytdl.getInfo(url, (err, info) => {
         const title = info.title
