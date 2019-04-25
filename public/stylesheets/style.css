@@ -69,9 +69,33 @@ h1 {
   color: white;
 }
 
+.addToQueue {
+  position: absolute;
+  left: 740px;
+  top: 170px;
+  border-radius: 10px 10px 10px 10px;
+  border: 10px solid #128a48;
+  background: #128a48;
+  color: white;
+}
+
 .check-button {
   border-radius: 10px 10px 10px 10px;
   border: 10px solid #0485ff;
   background: #0485ff;
   color: white;
+}
+
+.queue {
+  float: left;
+}
+
+.queue input {
+  padding: 10px;
+  float: inherit;
+  
+}
+
+ul {
+  list-style: none;
 }
