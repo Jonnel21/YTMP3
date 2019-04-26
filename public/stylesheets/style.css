@@ -71,8 +71,8 @@ h1 {
 
 .addToQueue {
   position: absolute;
-  left: 740px;
-  top: 170px;
+  left: 300px;
+  top: 10px;
   border-radius: 10px 10px 10px 10px;
   border: 10px solid #128a48;
   background: #128a48;
