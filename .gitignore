@@ -1,3 +1,5 @@
 .vscode
 /music
+.gitignore
+.DS_Store
 node_modules

@@ -12,9 +12,12 @@ h1
   span.you You
   span.tube Tube 
   span.converter Converter
-form(action="/url", method="get")
-  label(for="URL") Enter URL:
-  input.URL-input(type="text", name="URL", id="URL", placeholder='https://www.youtube.com/watch?v=TMEmv9uienU', required)
-  button.converter-button Convert
-button.addToQueue(onclick="addToQueue()") Add
-div.queue
+div.container
+  form(action="/url", method="get")
+    div.queue
+      div.input-container
+        input.URL-input(type="text", name="URL", id="URL", placeholder='URL, i.e. https://www.youtube.com/watch?v=TMEmv9uienU', required)
+        p.remove &#x2715;
+  div.button-container
+    button.addToQueue(onclick="addToQueue()") Add
+    button.converter-button Convert

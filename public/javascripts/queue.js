@@ -1,19 +1,30 @@
 const ul = document.createElement('ul')
 
 function addToQueue() {
-    const input = document.getElementsByClassName('URL-input')[0].value
-    const list = document.createElement('input')
-    const li = document.createElement('li')
     const queue = document.getElementsByClassName('queue')[0]
 
-    list.setAttribute('readonly', 'readonly')
-    list.setAttribute ('value', input)
-    list.setAttribute('disabled', 'disabled')
+    let inputContainer = document.createElement('div')
+    inputContainer.setAttribute('class', 'input-container')
 
-    li.appendChild(list)
-    ul.appendChild(li)
+    let input = document.createElement('input')
 
-    queue.appendChild(ul)
-}  
+    input.setAttribute('class', 'URL-input')
+    input.setAttribute('text', 'text')
+    input.setAttribute ('name', 'URL')
+    input.setAttribute('placeholder', 'URL, i.e. https://www.youtube.com/watch?v=TMEmv9uienU')
+    input.setAttribute('required', true)
+
+    let p = document.createElement('P')
+    p.setAttribute('class', 'remove')
+    p.innerHTML = '&#x2715'
+
+    inputContainer.appendChild(input)
+    inputContainer.appendChild(p)
+
+    queue.appendChild(inputContainer)
+}
+
+//input.URL-input(type="text", name="URL", id="URL", placeholder='URL, i.e. https://www.youtube.com/watch?v=TMEmv9uienU', required)
+        //p &#x2715;
 
 
